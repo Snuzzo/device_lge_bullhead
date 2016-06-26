@@ -33,7 +33,7 @@ TARGET_NO_BOOTLOADER := true
 # Inline kernel
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/lge/bullhead
-TARGET_KERNEL_CONFIG := cyanogenmod_bullhead_defconfig
+TARGET_KERNEL_CONFIG := elementalx_defconfig
 
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
@@ -55,7 +55,7 @@ TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
 BOARD_USES_ALSA_AUDIO := true
 AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
-AUDIO_FEATURE_ENABLED_FLAC_OFFLOAD := true
+AUDIO_FEATURE_ENABLED_FLAC_OFFLOAD := false
 AUDIO_FEATURE_ENABLED_SPKR_PROTECTION := true
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 
@@ -165,3 +165,6 @@ BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS := hardware/cyanogen/cmhw
 
 -include vendor/lge/bullhead/BoardConfigVendor.mk
+
+# Build opts
+TARGET_GCC_VERSION_ARM64 := 4.9-kernel-xanax
